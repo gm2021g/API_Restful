@@ -7,16 +7,18 @@ const { productos } = require('../../data/data')
 const router = express.Router();
 
 // Rutas
-/*router.get('/', (req, res) => {
-    res.send('<h1 style="text-align:center"> Pagina Inicial </h1> <a href="/api/productos">Productos</a> <br> <br> <a href="/producto"> Añadir Productos </a>   ')
+/*
+router.get('/', (req, res) => {
+    res.send('<h1 style="text-align:center"> Pagina Inicial </h1> <a href="/api/productos">Productos</a> <br> <br> <a href="/api/creaproducto"> Añadir Productos </a>   ')
 });
 
-router.get('/productos', (req, res) => {
+router.get('/api/creaproductos', (req, res) => {
     res.sendFile(path.resolve(__dirname, './index.html'));
-});*/
+});
+*/
+
 
 router.get('/', (req, res) => {
-    const { precioMaximo, search } = req.query;
     let respuestaProductos = [...productos];
     return res.json(respuestaProductos);
 });
